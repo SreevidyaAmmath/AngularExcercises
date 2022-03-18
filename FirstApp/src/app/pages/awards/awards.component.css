@@ -1,0 +1,57 @@
+table {
+    width: 100%;
+    
+  }
+  #laureates th,#laureates td {
+    border: 1px solid;
+  }
+  
+    #awards {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 80px;
+    }
+    
+    
+    #awards td {
+      border: 1px solid #ddd;
+      padding: 8px;  
+      min-width: 80px;    
+    }
+    
+    #awards tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #awards tr:hover {background-color: #ddd;}
+    
+     #awards th {
+     
+      text-align: left;
+      background-color: grey;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      text-decoration: solid;
+      border: 1px;
+      min-width: 80px;
+      text-align: center;
+    } 
+    select {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  

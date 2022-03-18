@@ -1,0 +1,50 @@
+<p>Awards</p>
+<h5> year
+    <select [(ngModel)]="allyear" class="dropdown">
+        <option *ngFor="let x of year">{{x}}</option>
+    </select>
+    Category
+    <select [(ngModel)]="allcategory" class="dropdown">
+        <option *ngFor="let x of category">{{x}}</option>
+    </select>
+</h5>
+
+  <table id="awards" mat-table [dataSource]="dataSource | awardFilter:allyear| category:allcategory " class="mat-elevation-z8">
+
+   
+  <ng-container matColumnDef="year">
+    <th mat-header-cell *matHeaderCellDef> Year</th>
+    <td mat-cell *matCellDef="let element "> {{element.year}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+  <ng-container matColumnDef="laureates">
+    <th mat-header-cell *matHeaderCellDef> Laureates </th>
+    <td mat-cell *matCellDef="let element">
+       <table id="laureates"><tr *ngFor="let x of element.laureates" >
+           <td>ID:{{x.id}}</td>
+           <td>Name:{{x.firstname}} {{x.surname}}</td>
+           <td>Motivation{{x.motivation}}</td>
+           <td>Share:{{x.share}}</td>
+        </tr></table>
+        
+            
+            </td>
+        
+  </ng-container>
+         
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator #paginator [pageSizeOptions]="[5, 10, 15]" 
+showFirstLastButtons></mat-paginator>
+
+
+  
+  
+
+  

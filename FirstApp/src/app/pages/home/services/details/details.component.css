@@ -1,0 +1,14 @@
+p li{
+    color: rgb(73, 68, 68);
+    font-family: arial;
+}
+
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(8, 52, 99);
+}
+
+.details{
+    padding: 50px;
+    margin: 30px;
+}

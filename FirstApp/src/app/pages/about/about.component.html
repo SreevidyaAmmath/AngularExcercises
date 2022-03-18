@@ -1,0 +1,14 @@
+<h3>About us</h3>
+<p>We specialize in doing projects on various domains. We have a revenue of 
+  {{revenue | currency: 'INR'}}   million
+</p>
+<hr/>
+
+<h5>Filter Feedbacks based on type
+    <select [(ngModel)]="now">
+        <option *ngFor="let x of types">{{x}}</option>
+    </select>
+</h5>
+<h3>Feedbacks</h3>
+<app-feedback-box *ngFor="let x of flist | feedfilter:now " [feedback]="x"></app-feedback-box>
+<app-feedback></app-feedback>

@@ -1,0 +1,43 @@
+<div id="form"><h1 style="margin-bottom: 50px;">Send Us your enquiries</h1>
+
+    Select Language <select (change)="setLang()" [(ngModel)]="lang">
+             <option value="english">English</option>
+             <option value="tamil">Tamil</option>
+             <option value="hindi">Hindi</option>
+    </select>
+
+    <div style="overflow: hidden;">
+        <div class="formbox">
+            <h5>{{"VARS.firstname" | translate}}</h5>
+            <input type="text" [(ngModel)]="fname">*
+        </div>
+        <div class="formbox">
+            <h5>{{"VARS.lastname" | translate}}</h5>
+            <input type="text" [(ngModel)]="lname">*
+        </div>
+        <div class="formbox">
+            <h5>{{"VARS.email" | translate}}</h5>
+            <input type="email" [(ngModel)]="email">*
+        </div>
+        <div class="formbox">
+            <h5>{{"VARS.company" | translate}}</h5>
+            <input type="text" [(ngModel)]="company">*
+        </div>
+        <div class="formbox">
+            <h5>{{"VARS.message" | translate}}</h5>
+            <textarea [(ngModel)]="message"></textarea>*
+        </div>
+    </div>
+    <div class="error-box" *ngIf="errors.length>0">
+        <ul >
+            <li *ngFor="let x of errors">{{x}}</li>
+        </ul>
+    </div>
+    <div style="margin:30px;">
+        <button mat-raised-button color="primary" (click)="submit()">Send Enquiry</button>
+    </div>
+    </div>
+    
+    
+    
+    
