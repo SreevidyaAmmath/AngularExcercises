@@ -1,19 +1,22 @@
 {
-  "posts": [
+  "items": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "sreeeeeee",
+      "description": "dwfdsgagffddddddddddddddddddddddddddfd",
+      "price": "34",
+      "qty": "3",
+      "type": "Fruits",
+      "imagename": "nginx-1.21.6\\nginx-1.21.6\\html/hcm0tfvq.xlsx",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "sreeeeeee",
+      "description": "dwfdsgagffddddddddddddddddddddddddddfd",
+      "price": "34",
+      "qty": "3",
+      "type": "Fruits",
+      "imagename": "nginx-1.21.6\\nginx-1.21.6\\html/58zfe570.txt",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
